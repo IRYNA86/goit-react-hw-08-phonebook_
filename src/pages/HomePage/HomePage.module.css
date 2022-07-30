@@ -1,0 +1,12 @@
+.homePage {
+    border: solid 2px blue;
+    border-radius: 5px;
+    text-align: center;
+    background-color: bisque;
+    box-shadow: 2px 2px rgb(75, 64, 33), 1em 0 0.4em rgb(59, 211, 203)
+}
+.title {
+    color: blueviolet;
+    text-decoration: underline wavy rgb(216, 80, 80);
+    text-decoration-thickness: 1px;
+}

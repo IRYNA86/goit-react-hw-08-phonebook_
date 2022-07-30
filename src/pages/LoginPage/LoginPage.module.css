@@ -1,0 +1,45 @@
+.loginPage{
+    border: solid 2px blue;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(75, 64, 33), 1em 0 0.4em rgb(59, 211, 203);
+    background-color: bisque;
+    }
+.titleLogin {
+    color: blueviolet;
+    text-decoration: underline wavy rgb(216, 80, 80);
+    text-decoration-thickness: 1px;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  width: 100%;
+  color: white;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  
+}
+.inputLogin {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 25%;
+  height: 35px;
+  border: 1px solid #ff8c00;
+}
+.buttonLogin {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #9c2c97;
+  font-style: italic;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.buttonLogin:hover{
+    background: #3783c2;
+}

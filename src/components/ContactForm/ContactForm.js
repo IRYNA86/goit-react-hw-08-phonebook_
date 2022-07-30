@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { useAddContactMutation } from 'components/store/contactsSlice';
+import { useAddContactMutation, useGetContactsQuery } from 'components/store/slices/contactsApi';
 import shortid from 'shortid';
+import { toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 import s from '../ContactForm/ContactForm.module.css';
 
 function ContactForm() {
@@ -11,6 +13,7 @@ function ContactForm() {
   const [number, setNumber] = useState('');
 
   const [addContact] = useAddContactMutation();
+  const { data } = useGetContactsQuery();
 
   const handleChange = event => {
     switch (event.target.name) {
@@ -27,11 +30,17 @@ function ContactForm() {
 
   const handleSubmit = event => {
     event.preventDefault();
+    if (data.find(
+      contact => contact.name.toLowerCase() === name.toLowerCase()
+    )) {
+return toast.error(`${name} is already in contacts`);
+}
     addContact({
       id: shortid(),
       name,
       number,
     });
+    toast.success('Contact added!');
     reset();
   };
 

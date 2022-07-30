@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import {
   useGetContactsQuery,
   useDeleteContactMutation,
-} from 'components/store/contactsSlice';
+} from 'components/store/slices/contactsApi';
 import s from '../ContactList/ContactList.module.css';
 
 function ContactList() {
@@ -32,7 +32,7 @@ function ContactList() {
           {contacts.map(contact => (
             <li className={s.item} key={contact.id}>
               <span className={s.text}>{contact.name}:</span>
-              <span> {contact.phone} </span>
+              <span> {contact.number} </span>
               <button
                 className={s.button}
                 type="button"
